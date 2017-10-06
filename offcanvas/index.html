@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>off canvas</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="C:\Users\Priyadharshan\Downloads\Fullstackweb\HTML_CSS\responsivewebdesign\offcanvas\css\main.css">
+</head>
+<body>
+	<nav id="drawer" class="blue" onclick="my">
+		<h2>Off canvas</h2>
+		<p>Click outside the drawer to close</p>
+	</nav>
+	<main class="red">
+		<a id="menu">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"></path>
+        </svg>
+      </a>
+      <p>Click on the menu icon to open the drawer</p>
+	</main>
+	<script type="text/javascript">
+		var menu = document.querySelector('#menu');
+      	var main = document.querySelector('main');
+      	var drawer = document.querySelector('#drawer');
+
+      	menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        e.stopPropagation();
+      });
+      main.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
+	</script>
+
+</body>
+</html>

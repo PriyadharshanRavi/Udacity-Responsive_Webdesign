@@ -1,0 +1,54 @@
+html, body, main{
+	height: 100%;
+	width: 100%;
+}
+.blue{
+	background-color: blue;
+}
+.red{
+	background-color: red;
+}
+a#menu svg{
+	width: 40px;
+	fill: #000;
+}
+nav, main{
+	padding: 1em;
+	box-sizing: border-box;
+}
+nav{
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  /* This trasform moves the drawer off canvas. */
+  -webkit-transform: translate(-300px, 0);
+  transform: translate(-300px, 0);
+  /* Optionally, we animate the drawer. */
+  transition: transform 0.3s ease;
+}
+nav.open {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+@media screen and (min-width: 600px){
+	nav{
+		position: relative;
+		transform: translate(0, 0);
+	}
+	body{
+		display: flex;
+		flex-flow: row nowrap;
+	}
+	main{
+		width: auto;
+		flex-grow: 1;
+	}
+}
+@media (min-width: 600px){
+	main > #menu: after{
+		content: 'the drawer stays oen if the width > 600px';
+	}
+	main p, nav p{
+		text-decoration: line-through;
+	}
+}
