@@ -1,0 +1,44 @@
+
+
+.container{
+	display: flex;
+	flex-wrap: wrap;
+}
+.box{
+	width: 100%;
+}
+.darkblue{
+	background-color: #09285b;
+}
+.lightblue{
+	background-color: #0cb6d1;
+}
+.green{
+	background-color: #08b20b;
+}
+.red{
+	background-color: red;
+}
+.orange{
+	background-color: orange;
+}
+@media screen and (min-width: 450px){
+	.lightblue, .green{
+		width: 50%;
+	}
+}
+@media screen and (min-width: 550px){
+	.darkblue, .lightblue{
+		width: 50%
+	}
+	.green, .red, .orange{
+		width: 33.33%
+	}
+}
+@media screen and (min-width: 750px){
+	.container{
+		width: 750px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
