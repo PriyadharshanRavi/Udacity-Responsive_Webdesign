@@ -1,0 +1,47 @@
+.container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.box{
+  min-height: 150px;
+  width: 100%;
+}
+.mingle{
+  min-height: 150px;
+  width: 100%; 
+}
+.blue{
+  background-color: blue;
+}
+.green{
+  background-color: green;
+}
+.red{
+  background-color: red;
+}
+.orange{
+  background-color: orange;
+}
+
+@media screen and (min-width: 500px){
+  .mingle{
+    width: 50%
+  }
+  .green{
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 600px){
+  .green{
+    width: 25%;
+    order: 1;
+  }
+  .mingle{
+    width: 50%;
+  }
+  .orange{
+    width: 25%;
+    order: -1;
+  }
+}
